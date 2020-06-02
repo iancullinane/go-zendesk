@@ -78,7 +78,7 @@ func TestCreateUOrUpdateUser(t *testing.T) {
 	client := newTestClient(mockAPI)
 	defer mockAPI.Close()
 
-	user, err := client.CreateUser(ctx, User{
+	user, err := client.CreateOrUpdateUser(ctx, User{
 		Email: "test@example.com",
 		Name:  "testuser",
 	})

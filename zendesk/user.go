@@ -138,7 +138,7 @@ func (z *Client) CreateUser(ctx context.Context, user User) (User, error) {
 
 // CreateOrUpdateUser creates new user, if that user exists it will update that
 // users value, both cases return the users data
-// ref: https://developer.zendesk.com/rest_api/docs/support/user_fields#create-or-update-a-user-field-option
+// ref: https://developer.zendesk.com/rest_api/docs/support/users#create-or-update-user
 func (z *Client) CreateOrUpdateUser(ctx context.Context, user User) (User, error) {
 	var data, result struct {
 		User User `json:"user"`
